@@ -63,3 +63,19 @@ CREATE TABLE connecter2 (
     interface_routeur_sr VARCHAR(255),
     PRIMARY KEY (id_reseau, id_routeur)
 );
+
+-- Insertion dans `utilisateur`
+INSERT INTO utilisateur (pseudo, mot_de_passe) VALUES ('user1', 'mdp1');
+
+-- Insertion dans `routeur`
+INSERT INTO routeur (mac) VALUES ('00:1B:44:17:4B:E9');
+
+-- Insertion dans `infrastructure`
+INSERT INTO infrastructure (nom, id_utilisateur) VALUES ('Infra1', 1);
+
+-- Insertion dans `reseau`
+INSERT INTO reseau (nom, mask_reseau, adresse_reseau, id_infrastructure) VALUES ('Reseau1', '255.255.255.0', '192.168.1.0', 1);
+
+SELECT * FROM utilisateur;
+SELECT * FROM routeur;
+SELECT * FROM infrastructure;
